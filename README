@@ -19,8 +19,4 @@ Fri:	000000000000000000000000
 Sat:	000000000000000001000000
 Sun:	000000000000001111000000
 
-The matrix is made up of zeros and ones where one means the corresponding hour block is listed in each schedules, and zero means their is some schedule that does not list that hour.
-
-The input file must exactly adhere to the syntax in the 'teamtimes' example file. Any number of schedules may be listed.
-
-Have fun!
+The matrix is made up of zeros and ones where one means the corresponding hour block is described in each schedule of the list, and zero means there is some schedule in the list that does not have that hour described. The input file must exactly adhere to the syntax in the 'teamtimes' example file. Any number of schedules may be listed.
