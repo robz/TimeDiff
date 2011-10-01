@@ -18,7 +18,7 @@ public class TimeDiff {
 			data.add(sc.nextLine());
 		sc.close();
 		
-		boolean diffArr[][][] = new boolean[4][7][24];
+		boolean diffArr[][][] = new boolean[data.size()][7][24];
 		int i = 0;
 		for(String times:data) {
 			//System.out.println(times);
@@ -29,9 +29,10 @@ public class TimeDiff {
 				int day = getDayIndex(day_info[0]);
 				//System.out.println(day_info[0]+"--"+day);
 				String range[] = day_info[1].split(" - ");
+				//System.out.println(day_info[1]);
 				int hour1 = getHourIndexes(day_info[1])[0], hour2 = getHourIndexes(day_info[1])[1];
 				//System.out.println(range[0]+"-"+range[1]+" == "+hour1+"-"+hour2);
-				for(int j = hour1; j <= hour2; j++)
+				for(int j = hour1; j < hour2; j++)
 					diffArr[i][day][j-1] = true;
 			}
 			//System.out.println("\n");
@@ -68,6 +69,10 @@ public class TimeDiff {
 			}
 			System.out.println();
 		}
+		System.out.print("\t");
+		for(int i = 0; i < matrix[0].length; i++)
+			System.out.print((i+1)%10);
+		System.out.println();
 	}
 	
 	public static int[] getHourIndexes(String range) {
