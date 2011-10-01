@@ -1,0 +1,26 @@
+This is a project that can diff several different week-long schedules to find the intersection. It outputs the results in a 7 by 24 (7 days by 24 hours) matrix. 
+
+For example, the file 'teamtimes' in this directory contains 5 week-long schedules. One of those schedules looks like this:
+
+Mon. 6:00 - 9:00 PM, Tues. 6:00 - 9:00 PM, Wed. 6:00 - 9:00 PM, Thurs. 6:00 - 9:00 PM, Fri. 3:00 - 6:00 PM, Fri. 6:00 - 9:00 PM, Sat. 12 Noon - 3:00 PM, Sat. 3:00 - 6:00 PM, Sun. 3:00 - 6:00 PM
+
+Several of these schedules can be listed out, each separated by a newline character, and provided as input to the program. The program is written in java. This is what the command line should look like if the 'teamtimes' file is used:
+
+$ javac TimeDiff.java
+$ java TimeDiff teamtimes
+Intersection of hours available:
+(first column is 1 AM, last is midnight)
+	123456789012345678901234
+Mon:	000000000000000000000000
+Tues:	000000000000000000000000
+Wed:	000000000000000000000000
+Thurs:	000000000000000000000000
+Fri:	000000000000000000000000
+Sat:	000000000000000001000000
+Sun:	000000000000001111000000
+
+The matrix is made up of zeros and ones where one means the corresponding hour block is listed in each schedules, and zero means their is some schedule that does not list that hour.
+
+The input file must exactly adhere to the syntax in the 'teamtimes' example file. Any number of schedules may be listed.
+
+Have fun!
